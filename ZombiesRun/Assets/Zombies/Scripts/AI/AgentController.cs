@@ -12,9 +12,12 @@ namespace ZombiesRun.AI
 
         private void Update()
         {
-            if (AtDestination())
+            if (!m_sleeping)
             {
-                m_agent.SetDestination(AgentHub.Instance.GetPosition());
+                if (AtDestination())
+                {
+                    m_agent.SetDestination(AgentHub.Instance.GetPosition());
+                }
             }
         }
 

@@ -395,11 +395,16 @@ MonoBehaviour:
     enableTransparentPostpass: 1
     enableDistortion: 1
     enablePostprocess: 1
-    enableAsyncCompute: 1
     enableOpaqueObjects: 1
     enableTransparentObjects: 1
     enableRealtimePlanarReflection: 1
     enableMSAA: 0
+    enableAsyncCompute: 1
+    runLightListAsync: 1
+    runSSRAsync: 1
+    runSSAOAsync: 1
+    runContactShadowsAsync: 1
+    runVolumeVoxelizationAsync: 1
     lightLoopSettings:
       overrides: 0
       enableTileAndCluster: 1
@@ -537,7 +542,7 @@ MonoBehaviour:
   m_agentHolder: {fileID: 637104706}
   m_agentData:
   - m_agentKey: Zombie
-    m_spawnCount: 2000
+    m_spawnCount: 1000
 --- !u!4 &1047111068
 Transform:
   m_ObjectHideFlags: 0
@@ -893,9 +898,10 @@ MonoBehaviour:
   punctualIntensity: 600
   areaIntensity: 200
   enableSpotReflector: 0
+  luxAtDistance: 1
   m_InnerSpotPercent: 0
   lightDimmer: 1
-  volumetricDimmer: 1
+  m_VolumetricDimmer: 1
   lightUnit: 2
   sunDiskSize: 1
   sunHaloSize: 0.1
@@ -912,6 +918,7 @@ MonoBehaviour:
   maxSmoothness: 0.99
   applyRangeAttenuation: 1
   useOldInspector: 0
+  useVolumetric: 1
   featuresFoldout: 1
   showAdditionalSettings: 0
   displayLightIntensity: 5.17
@@ -921,3 +928,4 @@ MonoBehaviour:
   shadowSoftness: 0.5
   blockerSampleCount: 24
   filterSampleCount: 32
+  minFilterSize: 0.00001
